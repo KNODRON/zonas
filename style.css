@@ -16,3 +16,51 @@ footer{padding:8px;text-align:center;font-size:12px;background:#003f2d;color:whi
 .etiqueta-zona{font-weight:bold}
 .alerta-p{color:#b00000}.alerta-r{color:#b45f00}.alerta-d{color:#8a7300}.alerta-ok{color:#006241}
 @media(max-width:700px){.panel{flex-direction:column}header h1{font-size:22px}#map{height:calc(100vh - 265px)}}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  padding: 20px;
+}
+
+.modal-contenido {
+  background: white;
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 12px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.cerrar {
+  float: right;
+  background: #9b0000;
+}
+
+.guia-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.tarjeta {
+  border-left: 6px solid #005c3b;
+  background: #f4f8f6;
+  padding: 14px;
+  border-radius: 10px;
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+  color: #003f2d;
+}
+
+.importante {
+  border-left-color: #d6b000;
+  background: #fff9dc;
+}
