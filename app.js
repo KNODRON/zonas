@@ -1,7 +1,12 @@
-const map = L.map("map").setView([-33.45, -70.66], 5);
+const map = L.map("map", {
+  worldCopyJump: false,
+  maxBounds: [[-60, -95], [-15, -45]],
+  maxBoundsViscosity: 1.0
+}).setView([-33.45, -70.66], 5);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
+  noWrap: true,
   attribution: "© OpenStreetMap"
 }).addTo(map);
 
