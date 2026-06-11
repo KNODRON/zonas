@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GeoRegistro RPAS</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <h1>GEOREGISTRO RPAS</h1>
+      <p>Consulta nacional de zonas prohibidas, restringidas y peligrosas DGAC</p>
+    </div>
+    <span class="badge">Uso orientativo</span>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="searchRow">
+        <input id="searchInput" placeholder="Buscar comuna, dirección o coordenadas: -33.45, -70.66" />
+        <button id="btnSearch">Buscar</button>
+        <button id="btnLocate">📍 Mi ubicación</button>
+      </div>
+
+      <div id="resultado" class="resultado neutral">
+        Consulte una ubicación o active “Mi ubicación”.
+      </div>
+
+      <div class="layers">
+        <label><input type="checkbox" data-layer="P" checked> Zonas Prohibidas (P)</label>
+        <label><input type="checkbox" data-layer="R" checked> Zonas Restringidas (R)</label>
+        <label><input type="checkbox" data-layer="D" checked> Zonas Peligrosas (D)</label>
+        <label><input type="checkbox" data-layer="AERODROMO" checked> Aeródromos</label>
+        <label><input type="checkbox" data-layer="PISTA"> Pistas chicas</label>
+      </div>
+    </section>
+
+    <div id="map"></div>
+
+    <section class="guia">
+      <h2>Guía rápida de fiscalización RPAS</h2>
+      <div class="cards">
+        <article><h3>Documentación</h3><p>Credencial operador RPA, registro del RPAS, autorización de vuelo si corresponde y seguro vigente.</p></article>
+        <article><h3>Verificaciones</h3><p>Altura, contacto visual, meteorología, distancias, zona de vuelo y restricciones DGAC.</p></article>
+        <article><h3>Zonas P/R/D</h3><p>P: prohibida. R: restringida. D: peligrosa. En caso de duda, verificar normativa DGAC vigente.</p></article>
+        <article><h3>Denuncia</h3><p>Recolectar antecedentes, identificar operador y remitir a DGAC o Ministerio Público según corresponda.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
