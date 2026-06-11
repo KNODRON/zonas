@@ -4,12 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GeoRegistro RPAS</title>
-
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
 <header>
   <div>
     <h1>GeoRegistro RPAS</h1>
@@ -19,13 +17,19 @@
 
 <section class="panel">
   <button id="btnUbicacion">📍 Mi ubicación</button>
-  <input id="busqueda" type="text" placeholder="Buscar comuna, dirección o coordenadas" />
+  <input id="busqueda" type="text" placeholder="Buscar comuna, dirección o coordenadas Ej: -33.45, -70.66" />
   <button id="btnBuscar">🔍 Buscar</button>
 </section>
 
-<section id="resultado">
-  Cargando zonas DGAC...
+<section class="leyenda">
+  <span><b class="p"></b> Prohibida</span>
+  <span><b class="r"></b> Restringida</span>
+  <span><b class="d"></b> Peligrosa</span>
+  <span><b class="a"></b> Aeródromo</span>
+  <span><b class="pc"></b> Pista chica</span>
 </section>
+
+<section id="resultado">Cargando capas DGAC optimizadas...</section>
 
 <div id="map"></div>
 
@@ -34,9 +38,6 @@
 </footer>
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-<script src="https://unpkg.com/@tmcw/togeojson@5.8.1/dist/togeojson.umd.js"></script>
 <script src="app.js"></script>
-
 </body>
 </html>
