@@ -230,6 +230,19 @@ async function buscar() {
   }
 }
 
+document.getElementById("btnGuia").addEventListener("click", () => {
+  document.getElementById("modalGuia").style.display = "block";
+});
+
+document.getElementById("cerrarGuia").addEventListener("click", () => {
+  document.getElementById("modalGuia").style.display = "none";
+});
+
+document.getElementById("modalGuia").addEventListener("click", (e) => {
+  if (e.target.id === "modalGuia") {
+    document.getElementById("modalGuia").style.display = "none";
+  }
+});
 cargarGeoJSON().catch(err => {
   console.error(err);
   resultado.textContent = "Error al cargar las capas GeoJSON optimizadas.";
