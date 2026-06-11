@@ -7,6 +7,44 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
+<div id="modalGuia" class="modal">
+  <div class="modal-contenido">
+    <button id="cerrarGuia" class="cerrar">✖</button>
+    <h2>Guía rápida de fiscalización RPAS</h2>
+
+    <div class="guia-grid">
+      <div class="tarjeta">
+        <h3>📄 Documentación</h3>
+        <p>Credencial operador RPA, registro del RPA, autorización de vuelo cuando corresponda y seguro vigente.</p>
+      </div>
+
+      <div class="tarjeta">
+        <h3>📍 Verificaciones</h3>
+        <p>Condiciones meteorológicas, visibilidad, zona de vuelo, altura máxima, contacto visual y restricciones del sector.</p>
+      </div>
+
+      <div class="tarjeta">
+        <h3>🚫 Zonas especiales</h3>
+        <p>Verificar si el punto se encuentra en zona Prohibida (P), Restringida (R) o Peligrosa (D).</p>
+      </div>
+
+      <div class="tarjeta">
+        <h3>⚠️ Infracciones comunes</h3>
+        <p>Volar sobre personas, operar cerca de aeródromos sin autorización, superar altura permitida o no portar documentación.</p>
+      </div>
+
+      <div class="tarjeta">
+        <h3>📢 Denuncia</h3>
+        <p>Ante infracción administrativa, reunir antecedentes y denunciar a la DGAC. Si constituye delito, dar cuenta al Ministerio Público.</p>
+      </div>
+
+      <div class="tarjeta importante">
+        <h3>✅ Clave operativa</h3>
+        <p>Esta plataforma es referencial y de apoyo en terreno. La verificación final debe realizarse conforme a normativa vigente y fuentes oficiales DGAC.</p>
+      </div>
+    </div>
+  </div>
+</div>  
 <body>
 <header>
   <div>
@@ -18,7 +56,8 @@
 <section class="panel">
   <button id="btnUbicacion">📍 Mi ubicación</button>
   <input id="busqueda" type="text" placeholder="Buscar comuna, dirección o coordenadas Ej: -33.45, -70.66" />
-  <button id="btnBuscar">🔍 Buscar</button>
+  <button id="btnBuscar">Buscar</button>
+  <button id="btnGuia">Guía fiscalización</button>
 </section>
 
 <section class="leyenda">
